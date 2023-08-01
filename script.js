@@ -26,6 +26,16 @@ let currentScore = 0;
 let activePlayer = 0;
 let playing = true;
 
+const switchPlayer = function () {
+  // Switch to next player
+  document.getElementById(`current--${activePlayer}`).textContent = 0;
+  currentScore = 0;
+  // Change background of active player
+  player0El.classList.toggle('player--active');
+  player1El.classList.toggle('player--active');
+  activePlayer = activePlayer === 0 ? 1 : 0;
+};
+
 // ROLLING DICE BUTTON functionality
 btnRoll.addEventListener('click', function () {
   if (playing) {
@@ -44,12 +54,7 @@ btnRoll.addEventListener('click', function () {
         currentScore;
     } else {
       // Switch to next player
-      document.getElementById(`current--${activePlayer}`).textContent = 0;
-      currentScore = 0;
-      // Change background of active player
-      player0El.classList.toggle('player--active');
-      player1El.classList.toggle('player--active');
-      activePlayer = activePlayer === 0 ? 1 : 0;
+      switchPlayer();
     }
   }
 });
@@ -77,12 +82,7 @@ btnHold.addEventListener('click', function () {
       diceEl.classList.add('hidden');
     } else {
       // Swith to the next player
-      document.getElementById(`current--${activePlayer}`).textContent = 0;
-      currentScore = 0;
-      // Change background of active player
-      player0El.classList.toggle('player--active');
-      player1El.classList.toggle('player--active');
-      activePlayer = activePlayer === 0 ? 1 : 0;
+      switchPlayer();
     }
   }
 });
