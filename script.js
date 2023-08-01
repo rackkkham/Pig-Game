@@ -100,6 +100,4 @@ btnHold.addEventListener('click', function () {
 });
 
 // NEW GAME BUTTON functionality (RESET Conditions)
-btnNew.addEventListener('click', function () {
-  startingConditions();
-});
+btnNew.addEventListener('click', startingConditions);
