@@ -17,7 +17,7 @@ This is a fun and interactive two-player dice game where the objective is to rea
 
 <h2>Technologies Used</h2>
 
-<p>• HTML</p>
+<p>• HTML5</p>
 <p>• CSS3 (Styling with backdrop filters and animations)</p>
 <p>• JavaScript (DOM manipulation)</p>
 
